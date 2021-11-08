@@ -1,8 +1,8 @@
 ---
 project:
-  description: "An analog project for Google sponsored Open MPW shuttles for SKY130."
+  description: "Dickson Charge Pump"
   foundry: "SkyWater"
-  git_url: "https://github.com/efabless/caravel_analog_user.git"
+  git_url: "https://github.com/Charaan27/caravel_dcp_tapeout.git"
   organization: "VSD"
   organization_url: "https://www.vlsisystemdesign.com"
   owner: "Charaan"
