@@ -167,24 +167,19 @@ X15 VPWR A Y VPB sky130_fd_pr__pfet_g5v0d10v5 ad=0p pd=0u as=0p ps=0u w=1.5e+06u
 .ends
 
 .subckt dcp_tapeout io_analog[0] io_analog[1] io_analog[2] vccd1 vssa1
-X0 a_n5_n773# io_analog[0] sky130_fd_pr__cap_mim_m3_1 l=5e+06u w=1e+08u
-X1 a_n5_n773# a_n5_n773# a_n3_n620# vssa1 sky130_fd_pr__nfet_01v8 w=1e+06u l=180000u
-X2 io_analog[2] vssa1 sky130_fd_pr__cap_mim_m3_1 l=1e+08u w=5e+06u
-X3 a_n3_n306# a_n3_n306# io_analog[2] vssa1 sky130_fd_pr__nfet_01v8 w=1e+06u l=180000u
-X4 a_n3_n620# a_n3_n620# a_n3_n454# vssa1 sky130_fd_pr__nfet_01v8 w=1e+06u l=180000u
-X5 a_n3_n454# io_analog[0] sky130_fd_pr__cap_mim_m3_1 l=1e+08u w=5e+06u
-X6 a_n3_n454# a_n3_n454# a_n3_n306# vssa1 sky130_fd_pr__nfet_01v8 w=1e+06u l=180000u
-X7 vccd1 vccd1 a_n5_n773# vssa1 sky130_fd_pr__nfet_01v8 w=1e+06u l=180000u
-X8 a_n3_n620# io_analog[1] sky130_fd_pr__cap_mim_m3_1 l=5e+06u w=1e+08u
-X9 a_n3_n306# io_analog[1] sky130_fd_pr__cap_mim_m3_1 l=1e+08u w=5e+06u
-C0 io_analog[1] vssa1 48.57fF
-C1 io_analog[0] vssa1 64.65fF
-C2 vccd1 vssa1 6.37fF
-C3 a_n5_n773# vssa1 5.33fF
-C4 a_n3_n620# vssa1 20.92fF
-C5 a_n3_n454# vssa1 12.60fF
-C6 io_analog[2] vssa1 28.27fF
-C7 a_n3_n306# vssa1 8.62fF
+X0 io_analog[0] io_analog[0] sky130_fd_pr__cap_mim_m3_1 l=5e+06u w=1e+08u
+X1 io_analog[0] io_analog[0] io_analog[1] vssa1 sky130_fd_pr__nfet_01v8 w=1e+06u l=180000u
+X2 io_analog[1] io_analog[1] vssa1 vssa1 sky130_fd_pr__nfet_01v8 w=1e+06u l=180000u
+X3 io_analog[1] io_analog[1] io_analog[0] vssa1 sky130_fd_pr__nfet_01v8 w=1e+06u l=180000u
+X4 vssa1 vssa1 sky130_fd_pr__cap_mim_m3_1 l=1.0001e+08u w=5e+06u
+X5 io_analog[0] io_analog[0] io_analog[1] vssa1 sky130_fd_pr__nfet_01v8 w=1e+06u l=180000u
+X6 vccd1 vccd1 io_analog[0] vssa1 sky130_fd_pr__nfet_01v8 w=1e+06u l=180000u
+X7 io_analog[1] io_analog[1] sky130_fd_pr__cap_mim_m3_1 l=5e+06u w=1e+08u
+X8 io_analog[0] io_analog[0] sky130_fd_pr__cap_mim_m3_1 l=1.0001e+08u w=5e+06u
+X9 io_analog[1] io_analog[1] sky130_fd_pr__cap_mim_m3_1 l=1e+08u w=5e+06u
+C0 vccd1 vssa1 6.37fF
+C1 io_analog[0] vssa1 91.44fF
+C2 io_analog[1] vssa1 87.31fF
 .ends
 
 .subckt user_analog_project_wrapper gpio_analog[0] gpio_analog[10] gpio_analog[11]
